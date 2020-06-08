@@ -1,9 +1,8 @@
 <template>
   <div>
     <navbar />
-    <div>
-      <nuxt />
-    </div>
+
+    <nuxt />
   </div>
 </template>
 
@@ -18,12 +17,13 @@ export default {
 </script>
 
 <style lang="scss">
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.4s;
+@import '~assets/css/variables';
+@import '~assets/css/animations.scss';
+
+.page-enter-active {
+  animation: fadeIn $transitionPageDuration;
 }
-.page-enter,
 .page-leave-active {
-  opacity: 0;
+  animation: fadeOut $transitionPageDuration;
 }
 </style>

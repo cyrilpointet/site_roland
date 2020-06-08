@@ -2,18 +2,21 @@
   <div class="background">
     <div class="background backgroundUnder"></div>
     <div class="background backgroundUpper"></div>
-    <div class="background flex items-center flex-col">
+    <div class="background flex flex-col">
       <span class="backgroundSpacer"></span>
-      <div class="container mx-auto pl-5 md:pl-0 text-white">
-        <h1 class="animatedText titleFont text-3xl md:text-6xl">
-          Cabinet Piacenza
-        </h1>
-        <h2 class="animatedText text-xl md:text-2xl titleFont">
-          Accupuncteur diplômé
-        </h2>
-        <h3 class="animatedText text-xl md:text-3xl titleFont mt-5">
-          Accupucture - Chi-gong - Diététique
-        </h3>
+      <div class="container mx-auto px-5 md:px-0 text-white">
+        <div class="animatedText">
+          <h1 class="titleFont text-3xl md:text-6xl">
+            Cabinet Piacenza
+          </h1>
+          <h2 class="text-xl md:text-2xl titleFont">
+            Accupuncteur diplômé
+          </h2>
+          <h3 class="text-xl md:text-3xl titleFont mt-5">
+            Accupucture - Chi-gong - Diététique
+          </h3>
+        </div>
+
         <p class="w-full md:w-1/2 mt-5 animatedButton">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
@@ -23,7 +26,7 @@
         </p>
         <div class="animatedButton mt-5">
           <button
-            class="border border-white py-2 px-4 uppercase cursor-pointer"
+            class="border border-white py-2 px-4 uppercase cursor-pointer rounded-full"
           >
             Demande d'informations
           </button>
@@ -48,23 +51,22 @@ export default {
 
 <style lang="scss">
 @import '~assets/css/fonts';
-
-$sm-path: polygon(0 0, 100% 0, 100% 60%, 0 90%);
-$md-path: polygon(0 0, 100% 0%, 25% 100%, 0% 100%);
-$lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
+@import '~assets/css/animations';
+@import '~assets/css/variables';
 
 .background {
   @apply fixed inset-0;
-  z-index: -1 !important;
+  z-index: -2;
   &Under {
     @apply bg-white bg-no-repeat bg-contain bg-right-bottom opacity-0;
-    animation: fadeIn 0.4s ease-out forwards;
-    animation-delay: 0.4s;
+    animation: fadeIn $transitionDuration ease-out forwards;
+    animation-delay: $transitionDuration;
     background-image: url('~assets/images/bg1.jpg');
   }
   &Upper {
     @apply bg-primary;
-    animation: openSm 0.4s ease-out forwards;
+    animation: fadeInDown $transitionDuration ease-out;
+    clip-path: $sm-path;
   }
   &Spacer {
     display: block;
@@ -74,19 +76,14 @@ $lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
 
 .animatedText {
   @apply opacity-0;
-  animation: fadeInLeft 1s ease-out forwards;
-}
-
-@for $i from 1 through 5 {
-  .animatedText:nth-child(#{$i}n) {
-    animation-delay: #{($i - 1) * 0.25}s;
-  }
+  animation: fadeInDown 0.3s ease-out forwards;
+  animation-delay: 0.5s;
 }
 
 .animatedButton {
   @apply opacity-0;
-  animation: fadeIn 1s ease-out forwards;
-  animation-delay: 0.5s;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.8s;
 }
 
 // responsive --------------------------------------------------
@@ -94,7 +91,8 @@ $lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
 @screen md {
   .background {
     &Upper {
-      animation: openMd 0.4s ease-out forwards;
+      clip-path: $md-path;
+      animation: fadeInLeft $transitionDuration ease-out;
     }
     &Spacer {
       display: block;
@@ -106,41 +104,8 @@ $lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
 @screen lg {
   .background {
     &Upper {
-      animation: openLg 0.4s ease-out forwards;
+      clip-path: $lg-path;
     }
-    &Spacer {
-      display: block;
-      height: 25%;
-    }
-  }
-}
-
-// animations --------------------------------------------------
-
-@keyframes openSm {
-  from {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: $sm-path;
-  }
-}
-
-@keyframes openMd {
-  from {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: $md-path;
-  }
-}
-
-@keyframes openLg {
-  from {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  to {
-    clip-path: $lg-path;
   }
 }
 </style>

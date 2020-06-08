@@ -1,0 +1,7 @@
+$transitionPageDuration: 0.2s;
+$transitionDuration: 0.4s;
+
+// transition screen path
+$sm-path: polygon(0 0, 100% 0, 100% 60%, 0 90%);
+$md-path: polygon(0 0, 100% 0%, 25% 100%, 0% 100%);
+$lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
