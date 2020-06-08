@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar />
-    <div class="container mx-auto">
+    <div>
       <nuxt />
     </div>
   </div>
@@ -16,3 +16,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.4s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+</style>

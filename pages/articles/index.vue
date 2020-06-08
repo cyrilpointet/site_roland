@@ -22,6 +22,7 @@
 <script>
 export default {
   layout: 'base',
+  // pageTransition: 'totopouet',
   computed: {
     blogPosts() {
       return this.$store.state.blogPosts

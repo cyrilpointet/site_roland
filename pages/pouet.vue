@@ -1,35 +1,6 @@
 <template>
-  <div class="background">
-    <div class="background backgroundUnder"></div>
-    <div class="background backgroundUpper"></div>
-    <div class="background flex items-center flex-col">
-      <span class="backgroundSpacer"></span>
-      <div class="container mx-auto pl-5 md:pl-0 text-white">
-        <h1 class="animatedText titleFont text-3xl md:text-6xl">
-          Cabinet Piacenza
-        </h1>
-        <h2 class="animatedText text-xl md:text-2xl titleFont">
-          Accupuncteur diplômé
-        </h2>
-        <h3 class="animatedText text-xl md:text-3xl titleFont mt-5">
-          Accupucture - Chi-gong - Diététique
-        </h3>
-        <p class="w-full md:w-1/2 mt-5 animatedButton">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa
-        </p>
-        <div class="animatedButton mt-5">
-          <button
-            class="border border-white py-2 px-4 uppercase cursor-pointer"
-          >
-            Demande d'informations
-          </button>
-        </div>
-      </div>
-    </div>
+  <div>
+    <h1 class="p-10 text-6xl">pouet pouet</h1>
   </div>
 </template>
 
@@ -55,7 +26,7 @@ $lg-path: polygon(0 0, 80% 0%, 50% 100%, 0% 100%);
 
 .background {
   @apply fixed inset-0;
-  z-index: -1 !important;
+  z-index: -1;
   &Under {
     @apply bg-white bg-no-repeat bg-contain bg-right-bottom opacity-0;
     animation: fadeIn 0.4s ease-out forwards;
