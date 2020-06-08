@@ -7,18 +7,13 @@
       <h2>
         site vitrine + blog
       </h2>
-      <span>
-        <nuxt-link to="/">Accueil</nuxt-link>
-      </span>
-      <span>
-        <nuxt-link to="/articles">blogPost</nuxt-link>
-      </span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'base',
   head() {
     return {
       script: [

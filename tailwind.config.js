@@ -1,11 +1,12 @@
-/*
-** TailwindCSS Configuration File
-**
-** Docs: https://tailwindcss.com/docs/configuration
-** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
-*/
+const colors = require('./colors.config')
+
 module.exports = {
-  theme: {},
+  theme: {
+    colors: { ...colors },
+    zIndex: {
+      '1': 1
+    }
+  },
   variants: {},
   plugins: []
 }
