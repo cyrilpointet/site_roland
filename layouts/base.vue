@@ -1,9 +1,8 @@
 <template>
   <div>
     <navbar />
-    <div class="container mx-auto">
-      <nuxt />
-    </div>
+
+    <nuxt />
   </div>
 </template>
 
@@ -16,3 +15,15 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '~assets/css/variables';
+@import '~assets/css/animations.scss';
+
+.page-enter-active {
+  animation: fadeIn $transitionPageDuration;
+}
+.page-leave-active {
+  animation: fadeOut $transitionPageDuration;
+}
+</style>
