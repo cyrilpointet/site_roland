@@ -25,9 +25,9 @@
           consequat massa
         </p>
         <div class="hpAnimatedFadeIn mt-5">
-          <button class="btn-base">
+          <nuxt-link to="/contact" class="btn-base">
             Demande d'informations
-          </button>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -54,7 +54,6 @@ export default {
 
 .hpBackground {
   @apply fixed inset-0;
-  z-index: -2;
   &Under {
     @apply bg-white bg-no-repeat bg-contain bg-right-bottom opacity-0;
     animation: fadeIn $transitionDuration ease-out forwards;

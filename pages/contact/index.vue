@@ -1,12 +1,12 @@
 <template>
   <main>
     <titlebar
-      title-text="Accupuncture"
-      subtitle-text="Inclus une brêve description de l'accupuncture"
-      background-img="bg_accupuncture.jpg"
+      title-text="Contact"
+      subtitle-text="Carte + formulaire de contact"
+      background-img="bg_contact.jpg"
     />
     <section id="mainContent" class="container mx-auto animatedContent">
-      <h1>Bla bla accupucture</h1>
+      <h1>Bla bla Contact</h1>
     </section>
   </main>
 </template>

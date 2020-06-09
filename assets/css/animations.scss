@@ -79,6 +79,15 @@
   }
 }
 
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
 @keyframes zoomIn {
   from {
     transform: scale3d(0, 0, 0);

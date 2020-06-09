@@ -1,7 +1,11 @@
 <template>
   <main>
-    <titlebar title-text="Articles" background-img="bg_articles.jpg" />
-    <section class="articlesIndexContent animatedContent">
+    <titlebar
+      title-text="Articles"
+      subtitle-text="la liste de tous les posts"
+      background-img="bg_articles.jpg"
+    />
+    <section id="mainContent" class="articlesIndexContent animatedContent">
       <div
         class="container mx-auto px-2 md:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
       >

@@ -1,17 +1,19 @@
 <template>
   <div class="screenView">
     <navbar />
-
     <nuxt />
+    <footerbar />
   </div>
 </template>
 
 <script>
 import navbar from '../components/navbar.vue'
+import footerbar from '../components/footerbar.vue'
 
 export default {
   components: {
-    navbar
+    navbar,
+    footerbar
   }
 }
 </script>
@@ -21,7 +23,8 @@ export default {
 @import '~assets/css/animations.scss';
 
 .screenView {
-  @apply min-h-screen;
+  @apply min-h-screen relative;
+  padding-bottom: 40px;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -32,6 +35,7 @@ export default {
 .page-leave-active {
   animation: noAnim $transitionPageDuration linear;
   & .titleMask,
+  .titleMaskArticle,
   .hpBackgroundUpper,
   .hpAnimatedText {
     animation: fadeOutLeft $transitionPageDuration linear;
@@ -42,6 +46,7 @@ export default {
   & .hpBackgroundUnder,
   .titleBackground,
   .animatedContent,
+  .titleArrow,
   .hpAnimatedFadeIn {
     animation: fadeOut $transitionPageDuration linear;
   }
