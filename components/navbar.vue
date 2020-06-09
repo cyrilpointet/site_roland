@@ -9,17 +9,18 @@
         <nuxt-link to="/">Accueil</nuxt-link>
       </span>
       <span class="ml-4">
-        <nuxt-link to="/articles">Articles</nuxt-link>
+        <nuxt-link to="/accupuncture">Accupunture</nuxt-link>
       </span>
       <span class="ml-4">
-        <nuxt-link to="/pouet">pouet</nuxt-link>
+        <nuxt-link to="/articles">Articles</nuxt-link>
       </span>
     </div>
   </div>
 </template>
 
 <script>
+import titlebar from '~/components/titlebar.vue'
 export default {
-  component: {}
+  component: { titlebar }
 }
 </script>

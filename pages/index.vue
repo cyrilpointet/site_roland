@@ -1,11 +1,11 @@
 <template>
-  <div class="background">
-    <div class="background backgroundUnder"></div>
-    <div class="background backgroundUpper"></div>
-    <div class="background flex flex-col">
-      <span class="backgroundSpacer"></span>
+  <div class="hpBackground">
+    <div class="hpBackground hpBackgroundUnder"></div>
+    <div class="hpBackground hpBackgroundUpper"></div>
+    <div class="hpBackground flex flex-col">
+      <span class="hpBackgroundSpacer"></span>
       <div class="container mx-auto px-5 md:px-0 text-white">
-        <div class="animatedText">
+        <div class="hpAnimatedText">
           <h1 class="titleFont text-3xl md:text-6xl">
             Cabinet Piacenza
           </h1>
@@ -17,17 +17,15 @@
           </h3>
         </div>
 
-        <p class="w-full md:w-1/2 mt-5 animatedButton">
+        <p class="w-full md:w-1/2 mt-5 hpAnimatedFadeIn">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
           et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
           felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
           consequat massa
         </p>
-        <div class="animatedButton mt-5">
-          <button
-            class="border border-white py-2 px-4 uppercase cursor-pointer rounded-full"
-          >
+        <div class="hpAnimatedFadeIn mt-5">
+          <button class="btn-base">
             Demande d'informations
           </button>
         </div>
@@ -54,7 +52,7 @@ export default {
 @import '~assets/css/animations';
 @import '~assets/css/variables';
 
-.background {
+.hpBackground {
   @apply fixed inset-0;
   z-index: -2;
   &Under {
@@ -65,7 +63,7 @@ export default {
   }
   &Upper {
     @apply bg-primary;
-    animation: fadeInDown $transitionDuration ease-out;
+    animation: slideInLeft $transitionDuration ease-out;
     clip-path: $sm-path;
   }
   &Spacer {
@@ -74,13 +72,13 @@ export default {
   }
 }
 
-.animatedText {
+.hpAnimatedText {
   @apply opacity-0;
   animation: fadeInDown 0.3s ease-out forwards;
   animation-delay: 0.5s;
 }
 
-.animatedButton {
+.hpAnimatedFadeIn {
   @apply opacity-0;
   animation: fadeIn 0.8s ease-out forwards;
   animation-delay: 0.8s;
@@ -89,7 +87,7 @@ export default {
 // responsive --------------------------------------------------
 
 @screen md {
-  .background {
+  .hpBackground {
     &Upper {
       clip-path: $md-path;
       animation: fadeInLeft $transitionDuration ease-out;
@@ -102,7 +100,7 @@ export default {
 }
 
 @screen lg {
-  .background {
+  .hpBackground {
     &Upper {
       clip-path: $lg-path;
     }

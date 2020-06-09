@@ -7,14 +7,19 @@
 </template>
 
 <script>
+import { BlogPost } from '~/models/blogPost'
+
 export default {
   layout: 'base',
   async asyncData({ params, payload }) {
-    if (payload) return { blogPost: payload }
-    else
+    if (payload) {
+      return { blogPost: payload }
+    } else {
+      const rawPost = await require(`~/assets/content/blog/${params.blog}.json`)
       return {
-        blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
+        blogPost: new BlogPost(rawPost)
       }
+    }
   }
 }
 </script>
