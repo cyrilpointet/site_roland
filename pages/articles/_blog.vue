@@ -1,32 +1,68 @@
 <template>
   <div class="blogPost">
-    <h1>{{ blogPost.title }}</h1>
-    <div v-html="$md.render(blogPost.body)" />
-    <nuxt-link :to="'/articles'">go</nuxt-link>
+    <articlebar :title-text="blogPost.title" />
+    <div class="container mx-auto blogPostContent">
+      <nuxt-link :to="'/articles'">
+        <span class="my-2 flex items-center">
+          <span class="material-icons"> keyboard_arrow_left </span>
+          Retour
+        </span>
+      </nuxt-link>
+      <main class="animatedContent">
+        <h1>{{ blogPost.title }}</h1>
+        <div v-html="$md.render(blogPost.body)" />
+      </main>
+    </div>
   </div>
 </template>
 
 <script>
+import { BlogPost } from '~/models/blogPost'
+import articlebar from '~/components/articlebar'
+
 export default {
   layout: 'base',
+  components: { articlebar },
   async asyncData({ params, payload }) {
-    if (payload) return { blogPost: payload }
-    else
+    if (payload) {
+      return { blogPost: payload }
+    } else {
+      const rawPost = await require(`~/assets/content/blog/${params.blog}.json`)
       return {
-        blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
+        blogPost: new BlogPost(rawPost)
       }
+    }
   }
 }
 </script>
 
 <style lang="scss">
 .blogPost {
-  & h1,
-  h2,
-  h3,
-  h4 {
-    @apply text-xl;
-    color: blue;
+  &Content {
+    & h1 {
+      @apply text-6xl my-4;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h2 {
+      @apply text-4xl my-3;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h3 {
+      @apply text-2xl my-2;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h4 {
+      @apply text-xl my-1;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h5 {
+      @apply text-lg my-1;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h6 {
+      @apply font-semibold;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
   }
 }
 </style>
