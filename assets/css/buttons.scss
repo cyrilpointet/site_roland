@@ -1,0 +1,64 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@import '~assets/css/variables';
+@import '~assets/css/animations.scss';
+
+@mixin btn {
+  @apply border py-2 px-4 uppercase cursor-pointer rounded-full block;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+  &:before {
+    @apply rounded-full;
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: 50%;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-out;
+  }
+  &:hover {
+    &:before {
+      transform: scaleX(1);
+    }
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.btn-light {
+  @include btn;
+  @apply text-secondary border-secondary bg-primary;
+  &:before {
+    @apply bg-secondary-dark;
+  }
+  &-small {
+    @apply py-1 px-2 text-sm;
+  }
+}
+
+.btn-dark {
+  @include btn;
+  @apply text-secondary border-secondary bg-secondary-dark;
+  &:before {
+    @apply bg-primary;
+  }
+  &-small {
+    @apply py-1 px-2 text-sm;
+  }
+}

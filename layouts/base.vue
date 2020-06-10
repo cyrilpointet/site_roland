@@ -24,6 +24,7 @@ export default {
 <style lang="scss">
 @import '~assets/css/variables';
 @import '~assets/css/animations.scss';
+@import '~assets/css/buttons.scss';
 
 .screenView {
   @apply relative;
@@ -37,7 +38,7 @@ export default {
 .animatedContent {
   @apply mb-5 px-2;
   opacity: 0;
-  animation: fadeIn $transitionDuration forwards;
+  animation: fadeIn $transitionDurationLong forwards;
 }
 @screen md {
   .animatedContent {
@@ -51,43 +52,20 @@ export default {
   .headerMaskArticle,
   .hpBackgroundUpper,
   .hpAnimatedText {
-    animation: fadeOutLeft $transitionPageDuration linear forwards;
+    animation: fadeOutLeft $transitionDurationShort linear forwards;
   }
   & .headerTextAnimated {
-    animation: zoomOut $transitionPageDuration linear forwards;
+    animation: zoomOut $transitionDurationShort linear forwards;
   }
   & .hpBackgroundUnder,
   .headerBackground,
   .animatedContent,
   .headerArrow,
   .hpAnimatedFadeIn {
-    animation: fadeOut $transitionPageDuration linear forwards;
+    animation: fadeOut $transitionDurationShort linear forwards;
   }
   & .headerSubtitle {
-    animation: fadeOutUp $transitionPageDuration linear forwards;
-  }
-}
-.btn-base {
-  @apply text-secondary border border-secondary py-2 px-4 uppercase cursor-pointer rounded-full block;
-  transition: background-color 0.2s linear;
-  &:hover {
-    @apply bg-secondary-dark;
-  }
-  &:focus {
-    outline: none !important;
-  }
-  &-small {
-    @apply py-1 px-2 text-sm;
-  }
-}
-.btn-dark {
-  @apply text-secondary border border-secondary py-2 px-4 uppercase cursor-pointer rounded-full bg-secondary-dark block;
-  transition: background-color 0.2s linear;
-  &:hover {
-    @apply bg-primary;
-  }
-  &:focus {
-    outline: none !important;
+    animation: fadeOutUp $transitionDurationShort linear forwards;
   }
 }
 </style>

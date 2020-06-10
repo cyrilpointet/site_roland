@@ -52,12 +52,12 @@ export default {
   }
   &Background {
     @apply absolute inset-0 bg-center bg-no-repeat bg-cover;
-    animation: fadeIn $transitionDuration ease-out forwards;
+    animation: fadeIn $transitionDurationLong ease-out forwards;
   }
   &Mask {
     @apply absolute inset-0 bg-primary;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 0 80%);
-    animation: slideInLeft $transitionDuration ease-out;
+    animation: slideInLeft $transitionDurationLong ease-out;
   }
   &Text {
     @apply text-white relative;
@@ -67,15 +67,15 @@ export default {
       opacity: 0;
       transform: scale3d(0, 0, 0);
       transform-origin: left center;
-      animation: zoomIn $transitionDuration ease-out forwards;
-      animation-delay: $transitionPageDuration;
+      animation: zoomIn $transitionDurationLong ease-out forwards;
+      animation-delay: $transitionDurationShort;
     }
   }
   &Subtitle {
     @apply text-3xl my-5 text-center hidden pl-4;
     opacity: 0;
-    animation: fadeInDown $transitionDuration ease-out forwards;
-    animation-delay: $transitionPageDuration;
+    animation: fadeInDown $transitionDurationLong ease-out forwards;
+    animation-delay: $transitionDurationShort;
   }
   &Arrow {
     @apply text-2xl absolute mb-10 rounded-full text-white p-4 opacity-0;
@@ -83,8 +83,8 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn $transitionDuration ease-out forwards;
-    animation-delay: $transitionPageDuration;
+    animation: fadeIn $transitionDurationLong ease-out forwards;
+    animation-delay: $transitionDurationShort;
   }
 }
 

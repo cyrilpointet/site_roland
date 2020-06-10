@@ -12,6 +12,10 @@ export default {
       })
     }
   },
+  router: {
+    linkActiveClass: 'active-link',
+    linkExactActiveClass: 'exact-active-link'
+  },
   /*
    ** Headers of the page
    */
