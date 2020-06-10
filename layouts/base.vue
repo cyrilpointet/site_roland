@@ -2,18 +2,15 @@
   <div class="screenView">
     <navbar />
     <nuxt />
-    <footerbar :route-path="$route.path" />
   </div>
 </template>
 
 <script>
 import navbar from '../components/navbar.vue'
-import footerbar from '../components/footerbar.vue'
 
 export default {
   components: {
-    navbar,
-    footerbar
+    navbar
   }
 }
 </script>
