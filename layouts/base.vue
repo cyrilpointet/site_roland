@@ -60,7 +60,7 @@ export default {
 }
 
 .page-leave-active {
-  animation: noAnim $transitionPageDuration linear;
+  animation: noAnim 1s linear;
   & .headerMask,
   .headerMaskArticle,
   .hpBackgroundUpper,
