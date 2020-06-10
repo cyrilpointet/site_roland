@@ -1,24 +1,10 @@
 <template>
-  <footer v-if="!isHp" class="footerBar">
+  <footer class="footerBar animatedContent">
     <div class="container mx-auto">
       <p>© 2020 Cyril Pointet</p>
     </div>
   </footer>
 </template>
-
-<script>
-export default {
-  computed: {
-    isHp() {
-      console.log(this.$nuxt.$route.path, this.$nuxt.$route.name)
-      if (!this.$nuxt.$route.path) {
-        return false
-      }
-      return this.$nuxt.$route.path === '/'
-    }
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 @import '~assets/css/variables';
@@ -27,5 +13,6 @@ export default {
 .footerBar {
   @apply absolute right-0 left-0 bottom-0 bg-primary p-2 text-white;
   animation: fadeIn $transitionPageDuration linear;
+  animation-delay: 0.5s;
 }
 </style>
