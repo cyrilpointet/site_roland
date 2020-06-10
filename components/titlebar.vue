@@ -17,7 +17,7 @@
         </h2>
       </div>
       <a href="#mainContent">
-        <i class="material-icons headerArrow md:hidden">arrow_downward</i>
+        <i class="md:hidden material-icons headerArrow">arrow_downward</i>
       </a>
     </div>
     <div class="titleFont headerSubtitle">
