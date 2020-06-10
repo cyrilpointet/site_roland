@@ -2,7 +2,7 @@
   <div class="screenView">
     <navbar />
     <nuxt />
-    <footerbar v-if="!isHp" />
+    <footerbar :route-path="$route.path" />
   </div>
 </template>
 
@@ -14,15 +14,6 @@ export default {
   components: {
     navbar,
     footerbar
-  },
-  computed: {
-    isHp() {
-      if (!this.$nuxt.$route.path) {
-        return false
-      } else {
-        return this.$nuxt.$route.path === '/'
-      }
-    }
   }
 }
 </script>
