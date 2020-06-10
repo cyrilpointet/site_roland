@@ -20,12 +20,10 @@
         <p class="w-full md:w-1/2 mt-5 hpAnimatedFadeIn">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa
+          et magnis dis parturient montes
         </p>
         <div class="hpAnimatedFadeIn mt-5 flex">
-          <nuxt-link to="/contact" class="btn-base">
+          <nuxt-link to="/contact" class="btn-base btn-base-small">
             Demande d'informations
           </nuxt-link>
         </div>

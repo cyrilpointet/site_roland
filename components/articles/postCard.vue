@@ -42,11 +42,11 @@ export default {
 .card {
   @apply mb-3 border border-lightgray bg-white shadow-xs overflow-hidden block transition-all duration-200 rounded-lg;
   &:hover {
-    @apply bg-secondary shadow-md;
+    @apply bg-primary text-white shadow-md;
   }
 }
 .cta {
-  @apply text-secondary bg-primary text-right italic p-5;
+  @apply text-white bg-secondary-dark text-right italic p-5;
   clip-path: polygon(60% 100%, 80% 0, 100% 0, 100% 100%);
 }
 </style>

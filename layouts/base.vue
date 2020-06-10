@@ -11,6 +11,12 @@ import navbar from '../components/navbar.vue'
 export default {
   components: {
     navbar
+  },
+  created() {
+    if (process.client) {
+      const vh = window.innerHeight * 0.01; // eslint-disable-line
+      document.documentElement.style.setProperty('--vh', `${vh}px`); // eslint-disable-line
+    }
   }
 }
 </script>
@@ -20,10 +26,12 @@ export default {
 @import '~assets/css/animations.scss';
 
 .screenView {
-  @apply min-h-screen relative;
+  @apply relative;
   padding-bottom: 40px;
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .animatedContent {
@@ -67,6 +75,9 @@ export default {
   }
   &:focus {
     outline: none !important;
+  }
+  &-small {
+    @apply py-1 px-2 text-sm;
   }
 }
 .btn-dark {
