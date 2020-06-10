@@ -10,6 +10,7 @@
 export default {
   computed: {
     isHp() {
+      console.log(this.$nuxt.$route.path, this.$nuxt.$route.name)
       if (!this.$nuxt.$route.path) {
         return false
       }

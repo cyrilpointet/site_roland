@@ -17,7 +17,7 @@
         </h2>
       </div>
       <a href="#mainContent">
-        <i class="md:hidden material-icons headerArrow">arrow_downward</i>
+        <i class="material-icons headerArrow">arrow_downward</i>
       </a>
     </div>
     <div class="titleFont headerSubtitle">
@@ -99,6 +99,9 @@ export default {
   }
   .headerSubtitle {
     @apply block;
+  }
+  .headerArrow {
+    display: none !important;
   }
 }
 

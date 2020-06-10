@@ -13,7 +13,6 @@ export class BlogPost {
       myDate.getDate() < 10 ? '0' + myDate.getDate() : myDate.getDate()
     const month =
       myDate.getMonth() < 10 ? '0' + myDate.getMonth() : myDate.getMonth()
-    console.log('created ', day + '/' + month + ' ' + myDate.getFullYear())
     return day + '/' + month + ' ' + myDate.getFullYear()
   }
 }
