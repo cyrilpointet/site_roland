@@ -77,7 +77,8 @@ export default {
 }
 
 .burgerButton {
-  @apply absolute top-0 left-0 m-1 p-1 bg-primary rounded-full;
+  @apply fixed top-0 left-0 m-1 p-1 rounded-full;
+  background-color: rgba(59, 56, 56, 0.48);
   z-index: 5;
 }
 .slideMenu {

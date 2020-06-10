@@ -3,7 +3,7 @@
     <div class="headerContainer">
       <span class="headerBackground" :style="bgUrl"></span>
       <span class="headerMask"></span>
-      <div class="headerText container mx-auto">
+      <div class="headerText container mx-auto flex flex-col">
         <h1
           class="titleFont text-4xl md:text-6xl pl-4 md:pl-0 headerTextAnimated"
         >
@@ -52,29 +52,30 @@ export default {
   }
   &Background {
     @apply absolute inset-0 bg-center bg-no-repeat bg-cover;
-    // animation: fadeIn $transitionDuration ease-out forwards;
+    animation: fadeIn $transitionDuration ease-out forwards;
   }
   &Mask {
     @apply absolute inset-0 bg-primary;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 0 80%);
-    // animation: slideInLeft $transitionDuration ease-out;
+    animation: slideInLeft $transitionDuration ease-out;
   }
   &Text {
     @apply text-white relative;
     height: 100%;
     padding-top: 25%;
     &Animated {
-      // opacity: 0;
-      //transform: scale3d(0, 0, 0);
-      transform-origin: center center;
-      // animation: zoomIn $transitionDuration ease-out forwards;
-      // animation-delay: $transitionPageDuration;
+      opacity: 0;
+      transform: scale3d(0, 0, 0);
+      transform-origin: left center;
+      animation: zoomIn $transitionDuration ease-out forwards;
+      animation-delay: $transitionPageDuration;
     }
   }
   &Subtitle {
     @apply text-3xl my-5 text-center hidden pl-4;
-    // animation: fadeInDown $transitionDuration ease-out forwards;
-    // animation-delay: $transitionPageDuration;
+    opacity: 0;
+    animation: fadeInDown $transitionDuration ease-out forwards;
+    animation-delay: $transitionPageDuration;
   }
   &Arrow {
     @apply text-2xl absolute mb-10 rounded-full text-white p-4 opacity-0;
@@ -82,8 +83,8 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    // animation: fadeIn $transitionDuration ease-out forwards;
-    // animation-delay: $transitionPageDuration;
+    animation: fadeIn $transitionDuration ease-out forwards;
+    animation-delay: $transitionPageDuration;
   }
 }
 
