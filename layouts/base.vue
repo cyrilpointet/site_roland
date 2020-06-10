@@ -29,33 +29,57 @@ export default {
   overflow-x: hidden;
 }
 
-/*.page-enter-active {
-  animation: fadeIn $transitionPageDuration;
-}*/
+.animatedContent {
+  @apply mb-5 px-2;
+  opacity: 0;
+  animation: fadeIn $transitionDuration forwards;
+}
+@screen md {
+  .animatedContent {
+    @apply mb-5 px-0;
+  }
+}
+
 .page-leave-active {
   animation: noAnim $transitionPageDuration linear;
-  & .titleMask,
-  .titleMaskArticle,
+  & .headerMask,
+  .headerMaskArticle,
   .hpBackgroundUpper,
   .hpAnimatedText {
     animation: fadeOutLeft $transitionPageDuration linear;
   }
-  & .titleTextAnimated {
+  & .headerTextAnimated {
     animation: zoomOut $transitionPageDuration linear;
   }
   & .hpBackgroundUnder,
-  .titleBackground,
+  .headerBackground,
   .animatedContent,
-  .titleArrow,
+  .headerArrow,
   .hpAnimatedFadeIn {
     animation: fadeOut $transitionPageDuration linear;
   }
+  & .headerSubtitle {
+    animation: fadeOutUp $transitionPageDuration linear;
+  }
 }
 .btn-base {
-  @apply text-secondary border border-secondary py-2 px-4 uppercase cursor-pointer rounded-full;
+  @apply text-secondary border border-secondary py-2 px-4 uppercase cursor-pointer rounded-full block;
   transition: background-color 0.2s linear;
   &:hover {
     @apply bg-secondary-dark;
+  }
+  &:focus {
+    outline: none !important;
+  }
+}
+.btn-dark {
+  @apply text-secondary border border-secondary py-2 px-4 uppercase cursor-pointer rounded-full bg-secondary-dark block;
+  transition: background-color 0.2s linear;
+  &:hover {
+    @apply bg-primary;
+  }
+  &:focus {
+    outline: none !important;
   }
 }
 </style>

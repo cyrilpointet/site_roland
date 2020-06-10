@@ -1,19 +1,31 @@
 <template>
-  <div class="titleContainer">
-    <span class="titleBackground" :style="bgUrl"></span>
-    <span class="titleMask"></span>
-    <div class="titleText container mx-auto">
-      <h1 class="text-4xl md:text-6xl pl-4 md:pl-0 titleTextAnimated">
-        {{ titleText }}
-      </h1>
-      <h3 v-if="subtitleText" class="text-xl md:hidden pl-4 titleTextAnimated">
-        {{ subtitleText }}
-      </h3>
+  <header>
+    <div class="headerContainer">
+      <span class="headerBackground" :style="bgUrl"></span>
+      <span class="headerMask"></span>
+      <div class="headerText container mx-auto">
+        <h1
+          class="titleFont text-4xl md:text-6xl pl-4 md:pl-0 headerTextAnimated"
+        >
+          {{ titleText }}
+        </h1>
+        <h2
+          v-if="subtitleText"
+          class="titleFont text-xl md:hidden pl-4 headerTextAnimated"
+        >
+          {{ subtitleText }}
+        </h2>
+      </div>
+      <a href="#mainContent">
+        <i class="material-icons headerArrow md:hidden">arrow_downward</i>
+      </a>
     </div>
-    <a href="#mainContent">
-      <i class="material-icons titleArrow md:hidden">arrow_downward</i>
-    </a>
-  </div>
+    <div class="titleFont headerSubtitle">
+      <h2 v-if="subtitleText">
+        {{ subtitleText }}
+      </h2>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -33,7 +45,7 @@ export default {
 @import '~assets/css/animations';
 @import '~assets/css/variables';
 
-.title {
+.header {
   &Container {
     @apply w-full h-20 bg-white relative bg-white min-h-screen;
     height: 300px;
@@ -59,6 +71,11 @@ export default {
       animation-delay: $transitionPageDuration;
     }
   }
+  &Subtitle {
+    @apply text-3xl my-5 text-center hidden pl-4 opacity-0;
+    animation: fadeInDown $transitionDuration ease-out forwards;
+    animation-delay: $transitionPageDuration;
+  }
   &Arrow {
     @apply text-2xl absolute mb-10 rounded-full text-white p-4 opacity-0;
     bottom: 10px;
@@ -71,19 +88,22 @@ export default {
 }
 
 @screen md {
-  .titleContainer {
+  .headerContainer {
     @apply min-h-0;
   }
-  .titleText {
+  .headerText {
     @apply pt-10;
   }
-  .titleMask {
+  .headerMask {
     clip-path: polygon(0 0, 75% 0, 50% 100%, 0 100%);
+  }
+  .headerSubtitle {
+    @apply block;
   }
 }
 
 @screen lg {
-  .titleMask {
+  .headerMask {
     clip-path: polygon(0 0, 50% 0, 25% 100%, 0 100%);
   }
 }

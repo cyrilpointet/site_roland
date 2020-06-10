@@ -24,7 +24,7 @@
           felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
           consequat massa
         </p>
-        <div class="hpAnimatedFadeIn mt-5">
+        <div class="hpAnimatedFadeIn mt-5 flex">
           <nuxt-link to="/contact" class="btn-base">
             Demande d'informations
           </nuxt-link>

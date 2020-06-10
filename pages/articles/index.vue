@@ -5,7 +5,7 @@
       subtitle-text="la liste de tous les posts"
       background-img="bg_articles.jpg"
     />
-    <section id="mainContent" class="articlesIndexContent animatedContent">
+    <section id="mainContent" class="animatedContent">
       <div
         class="container mx-auto px-2 md:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
       >
@@ -19,7 +19,7 @@
 
 <script>
 import titlebar from '~/components/titlebar.vue'
-import postCard from '~/components/postCard.vue'
+import postCard from '~/components/articles/postCard.vue'
 
 export default {
   layout: 'base',
@@ -34,14 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import '~assets/css/variables';
-@import '~assets/css/animations';
-
-.articlesIndexContent {
-  opacity: 0;
-  animation: fadeIn $transitionDuration forwards;
-  animation-delay: $transitionDuration;
-}
-</style>

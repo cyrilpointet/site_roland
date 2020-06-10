@@ -1,10 +1,10 @@
 <template>
-  <div class="titleContainerArticle">
-    <span class="titleBackground"></span>
-    <span class="titleMaskArticle"></span>
-    <div class="titleTextArticle container mx-auto">
+  <div class="headerContainerArticle">
+    <span class="headerBackground"></span>
+    <span class="headerMaskArticle"></span>
+    <div class="headerTextArticle container mx-auto">
       <h1
-        class="text-2xl md:text-4xl pl-4 md:pl-0 titleTextAnimated w-2/3 md:w-1/2 truncate"
+        class="text-2xl md:text-4xl pl-4 md:pl-0 headerTextAnimated w-2/3 md:w-1/2 truncate"
       >
         {{ titleText }}
       </h1>
@@ -22,7 +22,7 @@ export default {
 @import '~assets/css/animations';
 @import '~assets/css/variables';
 
-.title {
+.header {
   &ContainerArticle {
     @apply w-full h-20 bg-white relative bg-white min-h-screen;
     min-height: 200px;
@@ -60,13 +60,13 @@ export default {
 }
 
 @screen md {
-  .titleContainerArticle {
+  .headerContainerArticle {
     @apply min-h-0;
   }
-  .titleTextArticle {
+  .headerTextArticle {
     @apply pt-3;
   }
-  .titleMaskArticle {
+  .headerMaskArticle {
     clip-path: polygon(0 0, 75% 0, 50% 100%, 0 100%);
   }
 }

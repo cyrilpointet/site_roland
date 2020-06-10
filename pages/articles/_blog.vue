@@ -1,10 +1,17 @@
 <template>
   <div class="blogPost">
     <articlebar :title-text="blogPost.title" />
-    <nuxt-link :to="'/articles'">Retour</nuxt-link>
     <div class="container mx-auto blogPostContent">
-      <h1>{{ blogPost.title }}</h1>
-      <div v-html="$md.render(blogPost.body)" />
+      <nuxt-link :to="'/articles'">
+        <span class="my-2 flex items-center">
+          <span class="material-icons"> keyboard_arrow_left </span>
+          Retour
+        </span>
+      </nuxt-link>
+      <main class="animatedContent">
+        <h1>{{ blogPost.title }}</h1>
+        <div v-html="$md.render(blogPost.body)" />
+      </main>
     </div>
   </div>
 </template>
@@ -32,12 +39,29 @@ export default {
 <style lang="scss">
 .blogPost {
   &Content {
-    & h1,
-    h2,
-    h3,
-    h4 {
-      @apply text-xl;
-      color: blue;
+    & h1 {
+      @apply text-6xl my-4;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h2 {
+      @apply text-4xl my-3;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h3 {
+      @apply text-2xl my-2;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h4 {
+      @apply text-xl my-1;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h5 {
+      @apply text-lg my-1;
+      font-family: 'Hind Vadodara', sans-serif;
+    }
+    & h6 {
+      @apply font-semibold;
+      font-family: 'Hind Vadodara', sans-serif;
     }
   }
 }

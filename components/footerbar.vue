@@ -1,7 +1,7 @@
 <template>
   <footer v-if="!isHp" class="footerBar">
     <div class="container mx-auto">
-      <p>coucou</p>
+      <p>© 2020 Cyril Pointet</p>
     </div>
   </footer>
 </template>

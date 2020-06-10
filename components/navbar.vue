@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-primary text-white myNav">
-    <div class="burgerButton block md:hidden" @click="isMenuOpen = true">
+    <div class="burgerButton flex md:hidden" @click="isMenuOpen = true">
       <i class="material-icons text-4xl">menu</i>
     </div>
     <transition name="menuSlideLeft">
@@ -77,7 +77,7 @@ export default {
 }
 
 .burgerButton {
-  @apply fixed top-0 left-0 p-2;
+  @apply absolute top-0 left-0 m-1 p-1 bg-primary rounded-full;
   z-index: 5;
 }
 .slideMenu {

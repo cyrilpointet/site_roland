@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { BlogPost } from '../models/blogPost'
+import { BlogPost } from '../../models/blogPost'
 
 export default {
   props: ['blogpost'],
