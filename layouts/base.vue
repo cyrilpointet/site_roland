@@ -40,7 +40,7 @@ export default {
 .page-enter-active {
   animation: noAnim 1s linear forwards;
   & .headerMask {
-    animation: slideInLeft $transitionDuration ease-out;
+    animation: slideInLeft $transitionDuration ease-out forwards;
   }
   & .headerBackground {
     animation: fadeIn $transitionDuration ease-out forwards;
@@ -65,20 +65,20 @@ export default {
   .headerMaskArticle,
   .hpBackgroundUpper,
   .hpAnimatedText {
-    animation: fadeOutLeft $transitionPageDuration linear;
+    animation: fadeOutLeft $transitionPageDuration linear forwards;
   }
   & .headerTextAnimated {
-    animation: zoomOut $transitionPageDuration linear;
+    animation: zoomOut $transitionPageDuration linear forwards;
   }
   & .hpBackgroundUnder,
   .headerBackground,
   .animatedContent,
   .headerArrow,
   .hpAnimatedFadeIn {
-    animation: fadeOut $transitionPageDuration linear;
+    animation: fadeOut $transitionPageDuration linear forwards;
   }
   & .headerSubtitle {
-    animation: fadeOutUp $transitionPageDuration linear;
+    animation: fadeOutUp $transitionPageDuration linear forwards;
   }
 }
 .btn-base {
