@@ -37,6 +37,28 @@ export default {
   }
 }
 
+.page-enter-active {
+  animation: noAnim 1s linear forwards;
+  & .headerMask {
+    animation: slideInLeft $transitionDuration ease-out;
+  }
+  & .headerBackground {
+    animation: fadeIn $transitionDuration ease-out forwards;
+  }
+  & .headerTextAnimated {
+    animation: zoomIn $transitionDuration ease-out forwards;
+    //animation-delay: $transitionPageDuration;
+  }
+  & .headerSubtitle {
+    animation: fadeInDown $transitionDuration ease-out forwards;
+    //animation-delay: $transitionPageDuration;
+  }
+  & .headerArrow {
+    animation: zoomIn $transitionDuration ease-out forwards;
+    //animation-delay: $transitionPageDuration;
+  }
+}
+
 .page-leave-active {
   animation: noAnim $transitionPageDuration linear;
   & .headerMask,
