@@ -12,7 +12,7 @@
     />
   </head>
   <body {{ BODY_ATTRS }}>
-    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <form name="contact" netlify netlify-honeypot="bot-field" method="post" hidden>
       <input type="text" name="email" />
       <input type="number" name="phone" />
       <textarea name="message"></textarea>
