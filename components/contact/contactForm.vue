@@ -1,5 +1,11 @@
 <template>
-  <div class="mb-5">
+  <form
+    class="mb-5"
+    name="contact"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
     <h3 class="text-2xl text-center mb-5">
       Pour demander des informations<br />
       ou prendre rendez-vous au cabinet
@@ -27,7 +33,7 @@
         </button>
       </span>
     </div>
-  </div>
+  </form>
 </template>
 
 <style lang="scss">
