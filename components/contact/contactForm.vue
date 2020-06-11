@@ -12,7 +12,7 @@
       <form
         class="mb-5"
         name="contact"
-        method="post"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
