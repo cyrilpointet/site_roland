@@ -28,7 +28,7 @@
               id="email"
               v-model.trim="$v.email.$model"
               class="formInput"
-              type="text"
+              type="email"
               name="email"
             />
           </span>

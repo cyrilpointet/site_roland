@@ -3,7 +3,7 @@
     <titlebar
       title-text="Contact"
       subtitle-text="Nous trouver, nous contacter"
-      background-img="bg_contact.jpg"
+      :background-img="imgUrl"
     />
     <section
       id="mainContent"
@@ -32,9 +32,15 @@
 import titlebar from '~/components/titlebar.vue'
 import adressCard from '~/components/contact/adressCard.vue'
 import contactForm from '~/components/contact/contactForm.vue'
+import bgImg from '~/assets/images/bg_contact.jpg'
 
 export default {
   layout: 'base',
-  components: { titlebar, adressCard, contactForm }
+  components: { titlebar, adressCard, contactForm },
+  computed: {
+    imgUrl() {
+      return bgImg
+    }
+  }
 }
 </script>
