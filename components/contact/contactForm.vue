@@ -127,7 +127,7 @@ export default {
           headers: myHeaders,
           cache: 'default'
         }
-        fetch('/', myInit)
+        fetch('/contact', myInit)
           .then((response) => {
             if (response.ok) {
               this.ajaxPending = false
