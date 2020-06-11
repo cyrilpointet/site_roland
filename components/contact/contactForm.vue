@@ -138,8 +138,8 @@ export default {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            body: new URLSearchParams(this.createFormDataObj(data)).toString()
-          }
+          },
+          body: new URLSearchParams(this.createFormDataObj(data)).toString()
         })
           .then((response) => {
             if (response.ok) {
