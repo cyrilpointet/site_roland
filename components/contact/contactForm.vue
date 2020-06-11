@@ -12,7 +12,7 @@
       <form
         class="mb-5"
         name="contact"
-        method="POST"
+        method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         @submit.prevent="handleSubmit"
@@ -39,10 +39,10 @@
             </label>
             <input
               id="phone"
+              v-model.trim="$v.phone.$model"
               class="formInput"
               type="number"
               name="phone"
-              v-model.trim="$v.phone.$model"
             />
           </span>
           <span>
@@ -52,9 +52,9 @@
             </label>
             <textarea
               id="message"
+              v-model.trim="$v.message.$model"
               class="formInput formInputArea"
               name="message"
-              v-model.trim="$v.message.$model"
             />
           </span>
           <span class="self-center">
@@ -117,17 +117,29 @@ export default {
     }
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     handleSubmit() {
       this.$v.$touch()
       if (!this.$v.$invalid) {
         this.ajaxPending = true
-        const myHeaders = new Headers()
-        const myInit = {
-          method: 'POST',
-          headers: myHeaders,
-          cache: 'default'
+        const data = {
+          email: this.email,
+          phone: this.phone,
+          message: this.message
         }
-        fetch('/contact', myInit)
+        fetch('/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            body: this.encode({ 'form-name': 'contact', ...data })
+          }
+        })
           .then((response) => {
             if (response.ok) {
               this.ajaxPending = false
