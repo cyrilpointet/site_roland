@@ -133,7 +133,7 @@ export default {
           phone: this.phone,
           message: this.message
         }
-        fetch('/contact', {
+        fetch('/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
