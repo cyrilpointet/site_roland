@@ -4,5 +4,6 @@ module.exports = {
   primary: '#3b3838',
   secondary: '#daffda',
   lightgray: '#d9d9d9',
-  'secondary-dark': '#4d664d'
+  'secondary-dark': '#4d664d',
+  error: '#b62f2f'
 }
