@@ -19,7 +19,7 @@
         <label class="formLabel" for="phone">
           Téléphone<span>Requis</span>
         </label>
-        <input id="phone" class="formInput" type="text" name="phone" />
+        <input id="phone" class="formInput" type="number" name="phone" />
       </span>
       <span>
         <label class="formLabel" for="message">

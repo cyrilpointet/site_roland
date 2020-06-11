@@ -1,11 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head {{ HEAD_ATTRS }}>
     {{ HEAD }}
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Vadodara&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Vadodara&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body {{ BODY_ATTRS }}>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="email" />
+      <input type="number" name="phone" />
+      <textarea name="message"></textarea>
+    </form>
     {{ APP }}
   </body>
 </html>
