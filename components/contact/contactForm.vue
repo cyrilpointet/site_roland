@@ -6,16 +6,20 @@
     </h3>
     <div class="flex flex-col">
       <span>
-        <label class="formLabel" for="email">email</label>
+        <label class="formLabel" for="email">Email<span>Requis</span></label>
         <input id="email" class="formInput" type="text" name="email" />
       </span>
       <span>
-        <label class="formLabel" for="pouet">email</label>
-        <input id="pouet" class="formInput" type="text" name="pouet" />
+        <label class="formLabel" for="phone">
+          Téléphone<span>Requis</span>
+        </label>
+        <input id="phone" class="formInput" type="text" name="phone" />
       </span>
       <span>
-        <label class="formLabel" for="toto">email</label>
-        <textarea id="toto" class="formInput formInputArea" name="toto" />
+        <label class="formLabel" for="message">
+          Message<span>Requis</span>
+        </label>
+        <textarea id="message" class="formInput formInputArea" name="message" />
       </span>
       <span class="self-center">
         <button class="btn-dark mt-4">
@@ -29,12 +33,15 @@
 <style lang="scss">
 .formLabel {
   @apply block;
+  & span {
+    @apply text-xs italic font-light ml-2;
+  }
   &:focus {
     color: red;
   }
 }
 .formInput {
-  @apply block p-2 border border-lightgray w-full mb-2;
+  @apply block p-2 border-2 border-lightgray w-full mb-2;
   transition: all 0.2s;
   box-sizing: border-box;
   &:focus {

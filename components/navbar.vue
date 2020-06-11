@@ -33,19 +33,21 @@
       </nuxt-link>
       <span class="flex-grow"></span>
       <span class="ml-4">
-        <nuxt-link to="/">Accueil</nuxt-link>
+        <nuxt-link class="nuxtNavLink" to="/">Accueil</nuxt-link>
       </span>
       <span class="ml-4">
-        <nuxt-link to="/cabinet">Le Cabinet</nuxt-link>
+        <nuxt-link class="nuxtNavLink" to="/cabinet">Le Cabinet</nuxt-link>
       </span>
       <span class="ml-4">
-        <nuxt-link to="/accupuncture">Accupunture</nuxt-link>
+        <nuxt-link class="nuxtNavLink" to="/accupuncture"
+          >Accupunture</nuxt-link
+        >
       </span>
       <span class="ml-4">
-        <nuxt-link to="/articles">Articles</nuxt-link>
+        <nuxt-link class="nuxtNavLink" to="/articles">Articles</nuxt-link>
       </span>
       <span class="ml-4">
-        <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link class="nuxtNavLink" to="/contact">Contact</nuxt-link>
       </span>
     </div>
   </nav>
@@ -70,10 +72,10 @@ export default {
   z-index: 1;
 }
 .menuSlideLeft-leave-active {
-  animation: slideOutLeft $transitionPageDuration linear;
+  animation: slideOutLeft $transitionDurationShort linear;
 }
 .menuSlideLeft-enter-active {
-  animation: slideInLeft $transitionPageDuration linear;
+  animation: slideInLeft $transitionDurationShort linear;
 }
 
 .burgerButton {
@@ -86,6 +88,15 @@ export default {
   z-index: 10;
   &Item {
     @apply text-xl font-semibold block m-5;
+  }
+}
+
+.nuxtNavLink {
+  border-bottom: solid 2px;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  transition: border-bottom-color $transitionDurationLong;
+  &.exact-active-link {
+    border-bottom-color: white;
   }
 }
 </style>

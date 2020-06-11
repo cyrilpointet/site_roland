@@ -20,12 +20,10 @@
         <p class="w-full md:w-1/2 mt-5 hpAnimatedFadeIn">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa
+          et magnis dis parturient montes
         </p>
         <div class="hpAnimatedFadeIn mt-5 flex">
-          <nuxt-link to="/contact" class="btn-base">
+          <nuxt-link to="/contact" class="btn-light btn-light-small">
             Demande d'informations
           </nuxt-link>
         </div>
@@ -56,13 +54,13 @@ export default {
   @apply fixed inset-0;
   &Under {
     @apply bg-white bg-no-repeat bg-contain bg-right-bottom opacity-0;
-    animation: fadeIn $transitionDuration ease-out forwards;
-    animation-delay: $transitionDuration;
+    animation: fadeIn $transitionDurationLong ease-out forwards;
+    animation-delay: $transitionDurationLong;
     background-image: url('~assets/images/bg1.jpg');
   }
   &Upper {
     @apply bg-primary;
-    animation: slideInLeft $transitionDuration ease-out;
+    animation: slideInLeft $transitionDurationLong ease-out;
     clip-path: $sm-path;
   }
   &Spacer {
@@ -89,7 +87,7 @@ export default {
   .hpBackground {
     &Upper {
       clip-path: $md-path;
-      animation: fadeInLeft $transitionDuration ease-out;
+      animation: fadeInLeft $transitionDurationLong ease-out;
     }
     &Spacer {
       display: block;

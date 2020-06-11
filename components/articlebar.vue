@@ -29,12 +29,12 @@ export default {
   }
   &Background {
     @apply absolute inset-0 bg-center bg-no-repeat bg-cover opacity-0 bg-lightgray;
-    animation: fadeIn $transitionDuration ease-out forwards;
+    animation: fadeIn $transitionDurationLong ease-out forwards;
   }
   &MaskArticle {
     @apply absolute inset-0 bg-primary;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 0 80%);
-    animation: slideInLeft $transitionDuration ease-out;
+    animation: slideInLeft $transitionDurationLong ease-out;
   }
   &TextArticle {
     @apply text-white relative flex;
@@ -44,8 +44,8 @@ export default {
       opacity: 0;
       transform: scale3d(0, 0, 0);
       transform-origin: center center;
-      animation: zoomIn $transitionDuration ease-out forwards;
-      animation-delay: $transitionPageDuration;
+      animation: zoomIn $transitionDurationLong ease-out forwards;
+      animation-delay: $transitionDurationShort;
     }
   }
   &Arrow {
@@ -54,8 +54,8 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    animation: fadeIn $transitionDuration ease-out forwards;
-    animation-delay: $transitionPageDuration;
+    animation: fadeIn $transitionDurationLong ease-out forwards;
+    animation-delay: $transitionDurationShort;
   }
 }
 
