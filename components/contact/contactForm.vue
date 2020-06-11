@@ -117,18 +117,19 @@ export default {
     }
   },
   methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
+    createFormDataObj(data) {
+      const formData = new FormData()
+      for (const key of Object.keys(data)) {
+        formData.append(key, data[key])
+      }
+      return formData
     },
     handleSubmit() {
       this.$v.$touch()
       if (!this.$v.$invalid) {
         this.ajaxPending = true
         const data = {
+          'form-name': 'contact',
           email: this.email,
           phone: this.phone,
           message: this.message
@@ -137,7 +138,7 @@ export default {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            body: this.encode({ 'form-name': 'contact', ...data })
+            body: new URLSearchParams(this.createFormDataObj(data)).toString()
           }
         })
           .then((response) => {
