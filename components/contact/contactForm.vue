@@ -11,6 +11,7 @@
       ou prendre rendez-vous au cabinet
     </h3>
     <div class="flex flex-col">
+      <input type="hidden" name="form-name" value="contact" />
       <span>
         <label class="formLabel" for="email">Email<span>Requis</span></label>
         <input id="email" class="formInput" type="text" name="email" />
