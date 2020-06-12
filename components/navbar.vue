@@ -11,7 +11,7 @@
           >close</i
         >
         <span class="slideMenuItem" @click="isMenuOpen = false">
-          <nuxt-link to="/">Accueil</nuxt-link>
+          <nuxt-link to="/" title="Accueil">Accueil</nuxt-link>
         </span>
         <span class="slideMenuItem" @click="isMenuOpen = false">
           <nuxt-link to="/cabinet">Le Cabinet</nuxt-link>

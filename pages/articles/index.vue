@@ -35,6 +35,18 @@ export default {
     blogPosts() {
       return this.$store.state.blogPosts
     }
+  },
+  head() {
+    return {
+      title: "Cabinets d'accupuncture à Saint Maximin et Rocbaron",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Lorem ipsum et...'
+        }
+      ]
+    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="headerContainer">
+    <div class="headerContainer mb-10 md:mb-0">
       <span class="headerBackground" :style="bgUrl"></span>
       <span class="headerMask"></span>
       <div class="headerText container mx-auto flex flex-col">
