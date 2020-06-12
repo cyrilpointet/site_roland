@@ -4,7 +4,7 @@
     <div class="container mx-auto blogPostContent">
       <nuxt-link :to="'/articles'">
         <span class="my-2 flex items-center">
-          <span class="material-icons"> keyboard_arrow_left </span>
+          <i class="icon-left-open"></i>
           Retour
         </span>
       </nuxt-link>

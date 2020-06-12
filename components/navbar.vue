@@ -1,15 +1,14 @@
 <template>
   <nav class="bg-primary text-white myNav">
     <div class="burgerButton flex md:hidden" @click="isMenuOpen = true">
-      <i class="material-icons text-4xl">menu</i>
+      <i class="icon-menu text-3xl"></i>
     </div>
     <transition name="menuSlideLeft">
       <div v-if="isMenuOpen === true" class="slideMenu block md:hidden pt-5">
         <i
-          class="material-icons text-4xl fixed top-0 right-0 p-2"
+          class="icon-cancel text-3xl fixed top-0 right-0 p-2"
           @click="isMenuOpen = false"
-          >close</i
-        >
+        ></i>
         <span class="slideMenuItem" @click="isMenuOpen = false">
           <nuxt-link to="/" title="Accueil">Accueil</nuxt-link>
         </span>
@@ -44,11 +43,19 @@
         >
       </span>
       <span class="ml-4">
-        <nuxt-link class="nuxtNavLink" to="/articles">Articles</nuxt-link>
+        <nuxt-link class="nuxtNavLink cursor-pointer" to="/articles"
+          >Articles</nuxt-link
+        >
       </span>
       <span class="ml-4">
         <nuxt-link class="nuxtNavLink" to="/contact">Contact</nuxt-link>
       </span>
+      <a href="">
+        <i class="icon-facebook ml-4" title="Partager sur Facebook"></i>
+      </a>
+      <a href="">
+        <i class="icon-twitter ml-4" title="Partager sur Twitter"></i>
+      </a>
     </div>
   </nav>
 </template>
