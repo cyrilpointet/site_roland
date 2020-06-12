@@ -3,7 +3,7 @@
     <titlebar
       title-text="Articles"
       subtitle-text="la liste de tous les posts"
-      background-img="bg_articles.jpg"
+      :background-img="imgUrl"
     />
     <section id="mainContent" class="animatedContent">
       <div
@@ -20,6 +20,7 @@
 <script>
 import titlebar from '~/components/titlebar.vue'
 import postCard from '~/components/articles/postCard.vue'
+import bgImg from '~/assets/images/bg_articles.jpg'
 
 export default {
   layout: 'base',
@@ -28,8 +29,23 @@ export default {
     postCard
   },
   computed: {
+    imgUrl() {
+      return bgImg
+    },
     blogPosts() {
       return this.$store.state.blogPosts
+    }
+  },
+  head() {
+    return {
+      title: "Cabinets d'accupuncture à Saint Maximin et Rocbaron",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Lorem ipsum et...'
+        }
+      ]
     }
   }
 }

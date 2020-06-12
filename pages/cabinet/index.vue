@@ -3,10 +3,10 @@
     <titlebar
       title-text="Le Cabinet"
       subtitle-text="Un sous-titre à propos du cabinet"
-      background-img="bg_cabinet.jpg"
+      :background-img="imgUrl"
     />
     <section id="mainContent" class="container mx-auto animatedContent mb-2">
-      <tempContent img-url="images/img2.jpg" />
+      <tempContent :img-url="contentImg" />
       <span class="bloc m-2"></span>
       <iframe
         width="100%"
@@ -25,9 +25,31 @@
 <script>
 import titlebar from '~/components/titlebar.vue'
 import tempContent from '~/components/tempContent.vue'
+import bgImg from '~/assets/images/bg_cabinet.jpg'
+import contentImg from '~/assets/images/img2.jpg'
 
 export default {
   layout: 'base',
-  components: { titlebar, tempContent }
+  components: { titlebar, tempContent },
+  computed: {
+    imgUrl() {
+      return bgImg
+    },
+    contentImg() {
+      return contentImg
+    }
+  },
+  head() {
+    return {
+      title: "Cabinets d'accupuncture à Saint Maximin et Rocbaron",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Lorem ipsum et...'
+        }
+      ]
+    }
+  }
 }
 </script>

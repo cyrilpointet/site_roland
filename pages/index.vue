@@ -37,6 +37,14 @@ export default {
   layout: 'base',
   head() {
     return {
+      title: "Cabinets d'accupuncture à Saint Maximin et Rocbaron",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Lorem ipsum et...'
+        }
+      ],
       script: [
         { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]

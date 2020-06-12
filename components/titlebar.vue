@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="headerContainer">
+    <div class="headerContainer mb-10 md:mb-0">
       <span class="headerBackground" :style="bgUrl"></span>
       <span class="headerMask"></span>
       <div class="headerText container mx-auto flex flex-col">
@@ -34,7 +34,7 @@ export default {
   computed: {
     bgUrl() {
       return {
-        backgroundImage: `url('images/${this.backgroundImg}')`
+        backgroundImage: `url('${this.backgroundImg}')`
       }
     }
   }
@@ -79,7 +79,7 @@ export default {
   }
   &Arrow {
     @apply text-2xl absolute mb-10 rounded-full text-white p-4 opacity-0;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5);
