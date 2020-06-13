@@ -24,6 +24,16 @@
         <span class="slideMenuItem" @click="isMenuOpen = false">
           <nuxt-link to="/contact">Contact</nuxt-link>
         </span>
+
+        <span class="border-t border-lightgray block"></span>
+        <a href="" class="slideMenuShare">
+          <i class="icon-facebook" title="Partager sur Facebook"></i>
+          Partager sur Facebook
+        </a>
+        <a href="" class="slideMenuShare">
+          <i class="icon-twitter" title="Partager sur Twitter"></i>
+          Partager sur Twitter
+        </a>
       </div>
     </transition>
     <div class="container mx-auto bg-primary text-white p-4 hidden md:flex">
@@ -95,6 +105,9 @@ export default {
   z-index: 10;
   &Item {
     @apply text-xl font-semibold block m-5;
+  }
+  &Share {
+    @apply text-lg block m-5;
   }
 }
 
