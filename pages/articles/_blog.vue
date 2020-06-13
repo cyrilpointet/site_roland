@@ -1,7 +1,7 @@
 <template>
   <div class="blogPost">
     <articlebar :title-text="blogPost.title" />
-    <div class="container mx-auto blogPostContent">
+    <div class="container mx-auto">
       <nuxt-link :to="'/articles'">
         <span class="my-2 flex items-center">
           <i class="icon-left-open"></i>
@@ -9,8 +9,8 @@
         </span>
       </nuxt-link>
       <main class="animatedContent">
-        <h1>{{ blogPost.title }}</h1>
-        <div v-html="$md.render(blogPost.body)" />
+        <h1 class="text-4xl md:text-5xl mb-5">{{ blogPost.title }}</h1>
+        <div class="blogPostContent" v-html="$md.render(blogPost.body)" />
       </main>
     </div>
   </div>
@@ -52,11 +52,11 @@ export default {
 .blogPost {
   &Content {
     & h1 {
-      @apply text-6xl my-4;
+      @apply text-4xl my-4;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h2 {
-      @apply text-4xl my-3;
+      @apply text-3xl my-3;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h3 {
