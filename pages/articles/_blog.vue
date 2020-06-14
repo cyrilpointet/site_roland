@@ -52,28 +52,34 @@ export default {
 .blogPost {
   &Content {
     & h1 {
-      @apply text-4xl my-4;
+      @apply text-4xl my-5;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h2 {
-      @apply text-3xl my-3;
+      @apply text-3xl my-4;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h3 {
-      @apply text-2xl my-2;
+      @apply text-2xl my-6;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h4 {
-      @apply text-xl my-1;
+      @apply text-xl my-2;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h5 {
-      @apply text-lg my-1;
+      @apply text-lg my-2;
       font-family: 'Hind Vadodara', sans-serif;
     }
     & h6 {
       @apply font-semibold;
       font-family: 'Hind Vadodara', sans-serif;
+    }
+    & img {
+      @apply float-right;
+    }
+    p {
+      @apply my-2;
     }
   }
 }
