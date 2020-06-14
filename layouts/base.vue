@@ -18,6 +18,20 @@ export default {
       document.documentElement.style.setProperty('--vh', `${vh}px`); // eslint-disable-line
     }
   }
+  /* head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Lorem ipsum et...'
+        }
+      ],
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+      ]
+    }
+  } */
 }
 </script>
 
@@ -25,6 +39,7 @@ export default {
 @import '~assets/css/variables';
 @import '~assets/css/animations.scss';
 @import '~assets/css/buttons.scss';
+@import '~assets/css/fontello.scss';
 
 .screenView {
   @apply relative;

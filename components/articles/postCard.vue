@@ -1,11 +1,11 @@
 <template>
   <nuxt-link :to="postLink(blogpost.slug)" class="card">
-    <div>
-      <div class="p-3 flex flex-col justify-center">
+    <div class="flex flex-col cardInner">
+      <div class="p-3 flex flex-col flex-grow">
         <h3 class="titleFont text-2xl font-semibold pt-1">
           {{ post.title }}
         </h3>
-        <p class="text-sm italic">
+        <p class="text-sm italic mb-4">
           {{ post.created }}
         </p>
         <p>
@@ -13,9 +13,7 @@
         </p>
       </div>
 
-      <div class="cta">
-        Voir
-      </div>
+      <div class="cta">Voir<i class="icon-right-open"></i></div>
     </div>
   </nuxt-link>
 </template>
@@ -40,9 +38,13 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  @apply mb-3 border border-lightgray bg-white shadow-xs overflow-hidden block transition-all duration-200 rounded-lg;
+  @apply border border-lightgray bg-white shadow-xs overflow-hidden block transition-all duration-200 rounded-lg;
+  height: 100%;
   &:hover {
     @apply bg-primary text-white shadow-md;
+  }
+  &Inner {
+    height: 100%;
   }
 }
 .cta {

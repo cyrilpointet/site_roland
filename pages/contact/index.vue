@@ -15,14 +15,14 @@
       </div>
 
       <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d725.7307392728793!2d6.0746400292628895!3d43.315872198695914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c93f415d04c545%3A0xb33e6e82de3a9c7f!2s%22Emmanuelle%20Bourguet%20di%C3%A9t%C3%A9ticienne%22%20cabinet%20de%20di%C3%A9t%C3%A9tique%20et%20de%20nutrition%20-Cathy%20Denis-!5e0!3m2!1sfr!2sfr!4v1592032611519!5m2!1sfr!2sfr"
         width="100%"
-        height="350"
+        height="450"
         frameborder="0"
-        scrolling="no"
-        marginheight="0"
-        marginwidth="0"
-        src="https://www.openstreetmap.org/export/embed.html?bbox=6.072998642921449%2C43.31515143236215%2C6.077477931976319%2C43.31689414343313&amp;layer=mapnik&amp;marker=43.31602376990703%2C6.075238287448883"
-        style="border: 1px solid black"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
       ></iframe>
     </section>
   </main>

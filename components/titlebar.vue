@@ -17,7 +17,7 @@
         </h2>
       </div>
       <a href="#mainContent">
-        <i class="material-icons headerArrow">arrow_downward</i>
+        <i class="icon-down-open headerArrow"></i>
       </a>
     </div>
     <div class="titleFont headerSubtitle">
@@ -78,7 +78,7 @@ export default {
     animation-delay: $transitionDurationShort;
   }
   &Arrow {
-    @apply text-2xl absolute mb-10 rounded-full text-white p-4 opacity-0;
+    @apply text-xl absolute mb-10 rounded-full text-white p-4 opacity-0;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
